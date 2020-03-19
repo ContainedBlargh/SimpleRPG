@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Racing/Tracks/ObstacleTrack.gd" type="Script" id=1]
+[ext_resource path="res://Racing/Skyboxes/CitySkybox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Racing/Tracks/Pieces/HighwayStraight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Racing/Obstacles/Roadblock.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Racing/Player/Player.tscn" type="PackedScene" id=5]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 6, 1, 3 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 3, 1, 5 )
+
+[node name="ObstacleTrack" type="Spatial"]
+script = ExtResource( 1 )
+skybox = ExtResource( 2 )
+track_piece = ExtResource( 3 )
+obstacle = ExtResource( 4 )
+track_length = 50
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
+
+[node name="Statics" type="Spatial" parent="."]
+
+[node name="RestructureTrigger" type="Area" parent="Statics"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, -24 )
+input_ray_pickable = false
+angular_damp = 1.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Statics/RestructureTrigger"]
+shape = SubResource( 1 )
+
+[node name="Walls" type="Spatial" parent="Statics"]
+
+[node name="LeftWall" type="Area" parent="Statics/Walls" groups=[
+"LeftWall",
+]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 12, 0, 1, 0 )
+input_ray_pickable = false
+angular_damp = 1.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Statics/Walls/LeftWall"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -6.3, 2, 0 )
+shape = SubResource( 2 )
+
+[node name="RightWall" type="Area" parent="Statics/Walls" groups=[
+"RightWall",
+]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 12, 0, 1, 0 )
+input_ray_pickable = false
+angular_damp = 1.0
+
+[node name="CollisionShape2" type="CollisionShape" parent="Statics/Walls/RightWall"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 6.3, 2, 0 )
+shape = SubResource( 2 )
+
+[node name="FrontSpawners" type="Spatial" parent="Statics"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -60 )
+
+[node name="Spawner1" type="Spatial" parent="Statics/FrontSpawners"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15, 0, 0 )
+
+[node name="Spawner2" type="Spatial" parent="Statics/FrontSpawners"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45, 0, 0 )
+
+[node name="Spawner3" type="Spatial" parent="Statics/FrontSpawners"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45, 0, 0 )
+
+[node name="Spawner4" type="Spatial" parent="Statics/FrontSpawners"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35, 0, 0 )
+
+[node name="RearSpawners" type="Spatial" parent="Statics"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 60 )
+
+[node name="Spawner1" type="Spatial" parent="Statics/RearSpawners"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15, 0, 0 )
+
+[node name="Spawner2" type="Spatial" parent="Statics/RearSpawners"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45, 0, 0 )
+
+[node name="Spawner3" type="Spatial" parent="Statics/RearSpawners"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45, 0, 0 )
+
+[node name="Spawner4" type="Spatial" parent="Statics/RearSpawners"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35, 0, 0 )
+[connection signal="collided" from="Player" to="." method="_on_Player_collided"]

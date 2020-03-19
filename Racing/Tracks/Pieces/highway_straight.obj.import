@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/highway_straight.obj-e23f50a038ed3845201780d1ba329a14.mesh"
+
+[deps]
+
+files=[ "res://.import/highway_straight.obj-e23f50a038ed3845201780d1ba329a14.mesh" ]
+
+source_file="res://Racing/Tracks/Pieces/highway_straight.obj"
+dest_files=[ "res://.import/highway_straight.obj-e23f50a038ed3845201780d1ba329a14.mesh", "res://.import/highway_straight.obj-e23f50a038ed3845201780d1ba329a14.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

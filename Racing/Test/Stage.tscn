@@ -1,0 +1,144 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Racing/Test/Stage.gd" type="Script" id=1]
+[ext_resource path="res://Racing/Opponents/Boss/Boss.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Racing/Tracks/Pieces/HighwayStraight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Racing/Skyboxes/CitySkybox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Racing/Obstacles/roadblock.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Racing/Player/Camera.gd" type="Script" id=6]
+[ext_resource path="res://Racing/Player/GUI.gd" type="Script" id=7]
+[ext_resource path="res://Shaders/pixellation.shader" type="Shader" id=8]
+[ext_resource path="res://Utilities/CameraEnvironment.tres" type="Environment" id=9]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 8 )
+shader_param/size_x = 0.003
+shader_param/size_y = 0.003
+
+[node name="Stage" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Boss" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.202218, 0, -0.979341, 0, 1, 0, 0.979341, 0, -0.202218, 3.1, 0.221194, 2.22918 )
+
+[node name="HighwayStraight" parent="." instance=ExtResource( 3 )]
+
+[node name="OmniLight" parent="HighwayStraight" index="0"]
+light_energy = 0.0
+
+[node name="SpotLight" type="SpotLight" parent="HighwayStraight"]
+transform = Transform( 10.4712, 0, 0, 0, -4.57711e-07, 10.4712, 0, -10.4712, -4.57711e-07, 48.1675, 75.3926, 25.1309 )
+light_color = Color( 1, 0.960784, 0, 1 )
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 60.0
+spot_attenuation = 0.5
+spot_angle = 18.0
+spot_angle_attenuation = 0.5
+
+[node name="SpotLight2" type="SpotLight" parent="HighwayStraight"]
+transform = Transform( 10.4712, 0, 0, 0, -4.57711e-07, 10.4712, 0, -10.4712, -4.57711e-07, -47.1204, 79.5811, -33.5079 )
+light_color = Color( 1, 0.960784, 0, 1 )
+light_energy = 2.0
+shadow_enabled = true
+spot_range = 60.0
+spot_attenuation = 0.5
+spot_angle = 18.0
+spot_angle_attenuation = 0.5
+
+[node name="HighwayStraight2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0955, 0, 0, 0, 0.0955, 0, 0, 0, 0.0955, 0, 0, 12.0485 )
+
+[node name="HighwayStraight3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0955, 0, 0, 0, 0.0955, 0, 0, 0, 0.0955, 0, 0, -11.9942 )
+
+[node name="HighwayStraight4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0955, 0, 0, 0, 0.0955, 0, 0, 0, 0.0955, 0, 0, -23.7942 )
+
+[node name="HighwayStraight5" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0955, 0, 0, 0, 0.0955, 0, 0, 0, 0.0955, 0, 0, -35.3942 )
+
+[node name="CitySkybox" parent="." instance=ExtResource( 4 )]
+transform = Transform( -8.74228e-08, 0, 1.3, 0, 1, 0, -2, 0, -5.68248e-08, 2, -7, -6.80769 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -1.47746, 0.2, 17.0116 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -4.27029, 0.2, 17.0116 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 1.09735, 0.2, 17.0116 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( -0.0332885, 0, 0.0942968, 0, 0.1, 0, -0.0942968, 0, -0.0332885, 4.34595, 0.2, 16.8192 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance5" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 4.34595, 0.2, -16.7208 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance9" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 2.94595, 0.2, -2.7208 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance10" type="MeshInstance" parent="."]
+transform = Transform( -0.0286803, 0, 0.095799, 0, 0.1, 0, -0.095799, 0, -0.0286803, 0.34595, 0.2, -2.4208 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance6" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 1.5871, 0.2, -16.7208 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance7" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -1.50243, 0.2, -16.7208 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="MeshInstance8" type="MeshInstance" parent="."]
+transform = Transform( -0.0427458, 0, 0.0904035, 0, 0.1, 0, -0.0904035, 0, -0.0427458, -4.27746, 0.2, -16.7208 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.999421, -0.026426, 0.0214137, 0.0224794, 0.985663, 0.167219, -0.0255256, -0.166641, 0.985687, 4.12654, 1.61508, 5.44828 )
+environment = ExtResource( 9 )
+current = true
+fov = 60.0
+far = 200.0
+script = ExtResource( 6 )
+
+[node name="GUI" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 1024, 600 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="GUI"]
+material = SubResource( 3 )
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 1024, 600 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[editable path="HighwayStraight"]

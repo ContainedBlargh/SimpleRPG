@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/square.obj-6047521c1981c80eb500768b152ad6dc.mesh"
+
+[deps]
+
+files=[ "res://.import/square.obj-6047521c1981c80eb500768b152ad6dc.mesh" ]
+
+source_file="res://Utilities/square.obj"
+dest_files=[ "res://.import/square.obj-6047521c1981c80eb500768b152ad6dc.mesh", "res://.import/square.obj-6047521c1981c80eb500768b152ad6dc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

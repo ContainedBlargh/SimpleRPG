@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Racing/Tracks/Pieces/highway_straight.obj" type="ArrayMesh" id=1]
+
+[node name="HighwayStraight" type="MeshInstance"]
+transform = Transform( 0.0955, 0, 0, 0, 0.0955, 0, 0, 0, 0.0955, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 10.4712, 0, 0, 0, -4.57711e-07, 10.4712, 0, -10.4712, -4.57711e-07, -47.5, 78.0391, -32.4 )
+light_color = Color( 1, 0.945098, 0.501961, 1 )
+light_energy = 3.0
+light_specular = 0.0
+shadow_enabled = true
+omni_range = 1.0
+
+[node name="OmniLight2" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 47.5, 78, 32.5 )
+light_color = Color( 1, 0.945098, 0.501961, 1 )
+light_energy = 3.0
+light_specular = 0.0
+shadow_enabled = true
+omni_range = 1.0

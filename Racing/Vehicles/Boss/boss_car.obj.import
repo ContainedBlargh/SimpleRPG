@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/boss_car.obj-01fe3866277fab472d640df550d85d2e.mesh"
+
+[deps]
+
+files=[ "res://.import/boss_car.obj-01fe3866277fab472d640df550d85d2e.mesh" ]
+
+source_file="res://Racing/Vehicles/Boss/boss_car.obj"
+dest_files=[ "res://.import/boss_car.obj-01fe3866277fab472d640df550d85d2e.mesh", "res://.import/boss_car.obj-01fe3866277fab472d640df550d85d2e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

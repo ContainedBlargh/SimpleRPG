@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadblock.obj-7762f75522dfaff24fcce4288bd0dd4e.mesh"
+
+[deps]
+
+files=[ "res://.import/roadblock.obj-7762f75522dfaff24fcce4288bd0dd4e.mesh" ]
+
+source_file="res://Racing/Obstacles/roadblock.obj"
+dest_files=[ "res://.import/roadblock.obj-7762f75522dfaff24fcce4288bd0dd4e.mesh", "res://.import/roadblock.obj-7762f75522dfaff24fcce4288bd0dd4e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

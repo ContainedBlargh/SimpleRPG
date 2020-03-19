@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/skybox_city.obj-4bd46135acb8ab679b11d60ce4ba5079.mesh"
+
+[deps]
+
+files=[ "res://.import/skybox_city.obj-4bd46135acb8ab679b11d60ce4ba5079.mesh" ]
+
+source_file="res://Racing/Skyboxes/skybox_city.obj"
+dest_files=[ "res://.import/skybox_city.obj-4bd46135acb8ab679b11d60ce4ba5079.mesh", "res://.import/skybox_city.obj-4bd46135acb8ab679b11d60ce4ba5079.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

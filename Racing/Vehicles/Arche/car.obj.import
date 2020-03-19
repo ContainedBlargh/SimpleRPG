@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car.obj-a8a42e6cbe4a9ff23ff6d7cbed57b5db.mesh"
+
+[deps]
+
+files=[ "res://.import/car.obj-a8a42e6cbe4a9ff23ff6d7cbed57b5db.mesh" ]
+
+source_file="res://Racing/Vehicles/Arche/car.obj"
+dest_files=[ "res://.import/car.obj-a8a42e6cbe4a9ff23ff6d7cbed57b5db.mesh", "res://.import/car.obj-a8a42e6cbe4a9ff23ff6d7cbed57b5db.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
