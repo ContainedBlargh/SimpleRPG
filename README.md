@@ -1,4 +1,4 @@
 # SimpleRPG
 Not simple, probably not an RPG? We'll see what happens.
 
-![./screenshot2.png]
+![Screenshot](./screenshot2.png)
